@@ -1,0 +1,34 @@
+.game-card {
+	height: 400px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+main>:nth-child(even) .game-card {
+	flex-direction: row-reverse;
+}
+
+.game-card-content {
+	width: 75%;
+	display: flex;
+	flex-direction: column;
+}
+
+.game-title {
+	font-size: 2rem;
+}
+
+.game-release {
+	font-size: 1.25rem;
+	padding-bottom: 1rem;
+}
+
+.game-description {
+	padding-bottom: 1rem;
+}
+
+figure {
+	width: 200px;
+}
