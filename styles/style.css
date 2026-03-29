@@ -1,10 +1,14 @@
 /* Style variables */
 :root {
-	--title-color: hsl(330, 100%, 20%);
-	--sub-title-color: hsla(330, 100%, 30%, 1);
-	--text-color: hsl(330, 100%, 15%);
-	--main-background-color: hsla(330, 100%, 15%, 0.1);
-	--alt-background-color: hsl(330, 100%, 85%);
+	/* defaults to red-ish pink color but should be random on every page reload*/
+	--page-hue: 330;
+
+	--title-color: hsl(var(--page-hue), 100%, 20%);
+	--sub-title-color: hsla(var(--page-hue), 100%, 30%, 1);
+	--text-color: hsl(var(--page-hue), 100%, 15%);
+	--main-background-color: hsla(var(--page-hue), 100%, 15%, 0.15);
+	--alt-background-color: hsl(var(--page-hue), 100%, 85%);
+	--soft-background-color: hsla(var(--page-hue), 100%, 85%, 0.15);
 }
 
 /*  Resetting margin/padding to have more control */
@@ -17,12 +21,17 @@
 html {
 	background-color: var(--main-background-color);
 	color: var(--text-color);
-	font-size: 16px;
+	font-size: 18px;
+	font-family: "Ubuntu Mono";
 }
 
 /* Tag selectors */
 section {
 	padding: 32px 0;
+}
+
+main>:nth-child(even) {
+	background-color: var(--soft-background-color);
 }
 
 h1 {
@@ -31,7 +40,7 @@ h1 {
 }
 
 li {
-	margin-left: 24px;
+	margin-left: 2rem;
 }
 
 nav {
@@ -101,46 +110,6 @@ nav {
 	justify-content: space-between;
 }
 
-/* Section parts classes */
-
-.section-title {
-	/* WIP */
-	color: var(--title-color);
-	font-size: 2.15rem;
-}
-
-.section-subtitle {
-	/* WIP */
-	color: var(--sub-title-color);
-	font-size: 1.25rem;
-}
-
-.section-content {
-	/* WIP */
-	justify-content: start;
-	padding: 24px 0;
-	max-width: 75%;
-	width: fit-content;
-}
-
-/* Section IDs */
-
-#who-am-i {
-	/* WIP */
-}
-
-#what-i-code {
-	/* WIP */
-}
-
-#what-i-learned {
-	/* WIP */
-}
-
-#outside-of-code {
-	/* WIP */
-}
-
 /* Footer IDs */
 
 #thank-you {
@@ -149,6 +118,5 @@ nav {
 }
 
 #copyright {
-	/* WIP */
 	color: var(--sub-title-color);
 }
