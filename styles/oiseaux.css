@@ -1,0 +1,30 @@
+.bird-card {
+	min-height: 400px;
+	flex-wrap: wrap;
+	gap: 8px;
+}
+
+main>:nth-child(even) .bird-card article {
+	flex-direction: row-reverse;
+}
+
+article {
+	min-width: 40%;
+	gap: 4px;
+}
+
+.card-content {
+	box-sizing: border-box;
+	padding: 12px;
+	width: 75%;
+	max-width: 650px;
+}
+
+.card-title {
+	font-size: 2rem;
+	padding-bottom: 1rem;
+}
+
+figure {
+	width: 200px;
+}
